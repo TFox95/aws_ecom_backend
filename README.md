@@ -1,2 +1,7 @@
-# aws_ecom_backend
-Fastapi Deployment on AWS Lambda
+# ecom
+
+This project was generated via [manage-fastapi](https://ycd.github.io/manage-fastapi/)! :tada:
+
+## License
+
+This project is licensed under the terms of the None license.
