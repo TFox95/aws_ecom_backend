@@ -14,6 +14,7 @@ class Settings(BaseSettings):
 
     # Declare DATABASE_URI as Optional
     DATABASE_URI: Optional[PostgresDsn] = None
+    DATABASE_ECHO: bool
 
     @validator("BACKEND_CORS_ORIGINS", pre=True)
     def assemble_cors_origins(cls,

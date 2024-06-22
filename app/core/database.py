@@ -37,7 +37,7 @@ class Base:
         Returns:
             str: The table name with lowercase name and 's' suffix.
         """
-        return f"{cls.__name__.lower()}"
+        return f"{cls.__name__.lower()}s"
 
     def dict(self, exclude_none=True):
         return {
@@ -96,10 +96,9 @@ class DatabaseSessionManager:
 
 AsyncDatabaseManager = DatabaseSessionManager(
     host=str(settings.DATABASE_URI),
-    engine_kwargs={"echo": True,
+    engine_kwargs={"echo": settings.DATABASE_ECHO,
                    # "poolclass": NullPool})
                    "pool_size": 5})
-
 
 
 async def get_async_db_session() -> AsyncSession:
